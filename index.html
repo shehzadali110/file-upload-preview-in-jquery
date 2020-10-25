@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>File Upload Previewer</title>
-    <meta charset="utf-8" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="uploader.css" rel="stylesheet" />
-  </head>
 
-  <body>
+<head>
+  <title>File Upload Previewer</title>
+  <meta charset="utf-8" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/uploader.css" rel="stylesheet" />
+</head>
 
-    <div class="card border-secondary mt-3 mb-3 ml-auto mr-auto" style="max-width: 30rem;">
-      <div class="card-header">Simple jquery file upload with preview with Bootstrap</div>
-      <div class="card-body text-secondary">
-        <h5 class="card-title">First Attachments</h5>
-          <div id="file-uploader1">
-              <input type="file" id="image-upload1" multiple="multiple" />
-          </div>
-          <h5 class="card-title">Seccond Attachments</h5>
-          <div id="file-uploader2">
-            <input type="file" id="image-upload2" multiple="multiple" />
-          </div>
+<body>
+
+  <div class="card border-secondary mt-3 mb-3 ml-auto mr-auto" style="max-width: 30rem;">
+    <div class="card-header">Simple jquery file upload with preview with Bootstrap</div>
+    <div class="card-body text-secondary">
+      <h5 class="card-title">First Attachments</h5>
+      <div id="file-uploader1">
+        <input type="file" id="image-upload1" multiple="multiple" />
+      </div>
+      <h5 class="card-title">Seccond Attachments</h5>
+      <div id="file-uploader2">
+        <input type="file" id="image-upload2" multiple="multiple" />
       </div>
     </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="jquery.uploadPreviewer.js"></script>
+<script type="text/javascript" src="js/uploader.js"></script>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    // $("input[type=file]").uploadPreviewer();
-
+  $(document).ready(function () {
     $("#image-upload1").uploadPreviewer({
       preview_box: "#file-uploader1",
-      button_text: "add files"  
-    });
-    $("#image-upload2").uploadPreviewer({
-      preview_box: "#file-uploader2",  
       button_text: "add files"
     });
-
+    $("#image-upload2").uploadPreviewer({
+      preview_box: "#file-uploader2",
+      button_text: "add files"
+    });
   });
 </script>
